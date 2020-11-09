@@ -16,14 +16,14 @@ jobs:
             mvn install
             mvn verify
             echo 'agregando el reporte generado por serenity'
-      - store_test_results:
-          path: ~/test-results
-      - store_artifacts:
-          path: ~/test-results/junit
-      - persist_to_workspace:
-          root: .
-          paths:
-            - ProyectoApiRest/target
+#      - store_test_results:
+#          path: ~/test-results
+#      - store_artifacts:
+#          path: ~/test-results/junit
+#      - persist_to_workspace:
+#          root: .
+#          paths:
+#            - ProyectoApiRest/target
 
 workflows:
   build_test_norify:
